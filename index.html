@@ -369,7 +369,7 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px}
       <h2 class="serif">Parlons de votre <span class="it">problème.</span></h2>
       <p class="sub">20 minutes d'échange, sans pitch. Vous repartez avec un premier avis gratuit sur ce qui peut être automatisé.</p>
       <div class="channels">
-        <a class="channel" href="https://wa.me/212688773868" target="_blank" rel="noopener"><span class="lbl">WHATSAPP</span><b>+212 688 773 868</b></a>
+        <a class="channel" href="https://wa.me/212669700460" target="_blank" rel="noopener"><span class="lbl">WHATSAPP</span><b>+212 669 700 460</b></a>
         <a class="channel" href="mailto:contact@arkanelab.com"><span class="lbl">EMAIL</span><b>contact@arkanelab.com</b></a>
         <div class="channel"><span class="lbl">BASE</span><b>Agadir · Souss-Massa · Maroc</b></div>
       </div>
@@ -378,8 +378,8 @@ footer{border-top:1px solid var(--line);padding:54px 0 40px}
       <form class="form" id="diagForm">
         <div><label for="n">Nom</label><input id="n" type="text" placeholder="Votre nom" required /></div>
         <div><label for="a">Activité</label><input id="a" type="text" placeholder="Secteur / entreprise" /></div>
-        <div><label for="m">Message</label><textarea id="m" placeholder="En deux lignes, votre situation."></textarea></div>
-        <button type="submit" class="btn btn--solid" style="justify-content:center">Envoyer la demande →</button>
+        <div><label for="m">Message</label><textarea id="m" placeholder="En deux lignes, votre problème."></textarea></div>
+        <button type="submit" class="btn btn--solid" style="justify-content:center">Envoyer sur WhatsApp →</button>
       </form>
     </div>
   </div>
@@ -432,11 +432,12 @@ if(matchMedia('(pointer:fine)').matches){
 // année
 document.getElementById('yr').textContent=new Date().getFullYear();
 
-// form → mailto (pas de backend)
+// form → WhatsApp (message pré-rempli)
 document.getElementById('diagForm').addEventListener('submit',function(ev){
   ev.preventDefault();
   const n=document.getElementById('n').value,a=document.getElementById('a').value,m=document.getElementById('m').value;
-  location.href=`mailto:contact@arkanelab.com?subject=${encodeURIComponent('Demande de diagnostic — '+n)}&body=${encodeURIComponent('Activité : '+a+'\n\n'+m)}`;
+  const t='Bonjour Arkane Lab, je suis '+n+(a?' ('+a+')':'')+'.\n\n'+m;
+  location.href='https://wa.me/212669700460?text='+encodeURIComponent(t);
 });
 </script>
 </body>
