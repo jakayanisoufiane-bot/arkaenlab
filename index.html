@@ -16,6 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Arkane Lab", "url": "https://www.arkanelab.com", "logo": "https://www.arkanelab.com/assets/mark-512.png", "email": "contact@arkanelab.com", "telephone": "+212669700460", "slogan": "Built to solve.", "address": {"@type": "PostalAddress", "addressLocality": "Agadir", "addressCountry": "MA"}, "areaServed": "MA"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'IA va-t-elle remplacer mon équipe ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Elle prend les tâches répétitives : répondre aux mêmes questions, proposer des créneaux, relancer. Votre équipe garde la main et récupère les demandes délicates. L'objectif est de lui rendre du temps, pas de la remplacer."}}, {"@type": "Question", "name": "Est-ce que ça marche avec mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, c'est le principe. On part de ce que vous utilisez déjà (WhatsApp, agenda, logiciel métier, Excel) et on s'y connecte. Vous n'avez pas à changer de logiciel."}}, {"@type": "Question", "name": "Mes clients écrivent en darija, parfois en vocal. L'IA comprend ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L'assistant comprend le français, l'arabe et la darija, y compris les notes vocales, et répond dans la langue du client."}}, {"@type": "Question", "name": "Que deviennent les données de mes clients ?", "acceptedAnswer": {"@type": "Answer", "text": "Elles sont traitées dans le cadre de la loi marocaine 09-08. L'assistant n'a accès qu'aux informations nécessaires à sa tâche, et vous restez propriétaire de toutes vos données."}}, {"@type": "Question", "name": "Combien de temps pour démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic arrive sous 48 h après notre échange. Un premier assistant peut ensuite être en ligne en 2 à 4 semaines, selon ce qu'il doit faire."}}, {"@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": {"@type": "Answer", "text": "Un abonnement mensuel, adapté à la taille de votre activité, annoncé avant tout engagement. Le diagnostic, lui, est offert."}}, {"@type": "Question", "name": "Je dois être à Agadir pour travailler avec vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Tout se fait à distance, en visio et sur WhatsApp, partout au Maroc. Rien à installer chez vous."}}]}</script>
 <style>
 /* ============================================================
    ARKANE LAB — Identité 2026
@@ -131,6 +133,26 @@ header.scrolled{background:rgba(2,16,49,.88);backdrop-filter:blur(12px);border-b
 .sec-head h2{font-size:clamp(32px,4.6vw,56px);margin-top:20px}
 .sec-head p{color:var(--mist);margin-top:20px;font-size:18px;font-weight:300}
 
+/* bandeau confiance */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:26px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.trust-item:first-child{border-left:0;padding-left:0}
+.trust-item b{font-weight:600;font-size:16px}
+.trust-item span{color:var(--mist);font-size:14px;font-weight:300}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.faq .sec-head{margin-bottom:0}
+.faq-list{border-top:1px solid var(--line)}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-size:18px;font-weight:500;position:relative;transition:color .2s}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);width:28px;height:28px;display:grid;place-items:center;background:var(--sand);color:var(--navy);font-weight:600}
+.faq-list details[open] summary::after{content:"−"}
+.faq-list summary:hover{color:var(--sand)}
+.faq-list details p{color:var(--mist);font-weight:300;padding:0 40px 24px 0;max-width:62ch}
+
 /* manifeste */
 .manifesto{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--navy-2)}
 .manifesto .row{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end}
@@ -140,7 +162,7 @@ header.scrolled{background:rgba(2,16,49,.88);backdrop-filter:blur(12px);border-b
 .manifesto .note p+p{margin-top:16px}
 
 /* approche */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
 .step{padding:40px 32px 40px 0;border-right:1px solid var(--line);position:relative}
 .step + .step{padding-left:32px}
 .step:last-child{border-right:0}
@@ -223,6 +245,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   .pillars{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr}
   .step,.step + .step{padding:34px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(3){border-left:0;padding-left:0}
+  .trust-item:nth-child(n+3){border-top:1px solid var(--line)}
+  .faq-grid{grid-template-columns:1fr;gap:36px}
   .nav-links{display:none}
   .burger{display:block}
   .nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--navy-2);border-bottom:1px solid var(--line);padding:24px var(--gut);gap:20px;align-items:flex-start}
@@ -256,6 +282,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       <a href="#approche">Approche</a>
       <a href="#solutions">Solutions</a>
       <a href="#cabinets">Cabinets médicaux</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="cta">Parler de votre problème</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">MENU</button>
@@ -294,6 +321,16 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   </div>
 </section>
 
+<!-- ======================= CONFIANCE ======================= -->
+<section class="trust" aria-label="Nos engagements">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><b>Français, arabe, darija</b><span>Par écrit et en notes vocales</span></div>
+    <div class="trust-item"><b>WhatsApp Business officiel</b><span>L'API de Meta, pas un bricolage</span></div>
+    <div class="trust-item"><b>Données protégées</b><span>Dans le cadre de la loi 09-08</span></div>
+    <div class="trust-item"><b>Un humain garde la main</b><span>Les cas sensibles passent à votre équipe</span></div>
+  </div>
+</section>
+
 <!-- ======================= MANIFESTE ======================= -->
 <section class="section manifesto">
   <div class="wrap">
@@ -313,13 +350,14 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label">L'approche</span>
-      <h2>Trois temps. Aucun déplacement.</h2>
+      <h2>Quatre temps. Aucun déplacement.</h2>
       <p>Tout se fait à distance, où que vous soyez au Maroc. Vous ne payez que pour ce qui règle un problème mesurable.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="num">01</div><h3>Comprendre</h3><p>Un échange en visio ou sur WhatsApp pour cartographier vos tâches, vos outils et ce qui vous coûte du temps. On écoute avant de proposer.</p><span class="tag">Diagnostic offert</span></div>
-      <div class="step reveal"><div class="num">02</div><h3>Diagnostiquer</h3><p>On identifie où l'IA et l'automatisation font gagner le plus : tâches manuelles, outils qui ne se parlent pas, chiffres invisibles. Et on le chiffre.</p><span class="tag">Gains estimés</span></div>
-      <div class="step reveal"><div class="num">03</div><h3>Construire</h3><p>La solution est déployée en ligne, par étapes, en commençant par ce qui rapporte le plus vite. Chaque étape est jugée sur le résultat obtenu.</p><span class="tag">Mise en ligne rapide</span></div>
+      <div class="step reveal"><div class="num">01</div><h3>Comprendre</h3><p>Un échange en visio ou sur WhatsApp pour cartographier vos tâches, vos outils et ce qui vous coûte du temps. On écoute avant de proposer.</p><span class="tag">20 minutes, offert</span></div>
+      <div class="step reveal"><div class="num">02</div><h3>Diagnostiquer</h3><p>Sous 48 h, vous recevez les 2 ou 3 tâches à confier à l'IA en premier, le gain estimé pour chacune et le plan pour y arriver.</p><span class="tag">Diagnostic écrit offert</span></div>
+      <div class="step reveal"><div class="num">03</div><h3>Construire</h3><p>On commence petit, par ce qui rapporte le plus vite. Un premier assistant est en ligne en 2 à 4 semaines, testé en conditions réelles avant le lancement.</p><span class="tag">Pilote d'abord</span></div>
+      <div class="step reveal"><div class="num">04</div><h3>Mesurer</h3><p>On suit ce qui compte : temps gagné, délai de réponse, rendez-vous récupérés. Puis on ajuste. Une solution qui ne rapporte pas ne reste pas en place.</p><span class="tag">Résultats suivis</span></div>
     </div>
   </div>
 </section>
@@ -350,7 +388,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       <span class="label">Première solution</span>
       <h2>Cabinets dentaires &amp; médicaux.</h2>
       <p class="intro">Votre assistante jongle entre le téléphone, WhatsApp, l'agenda et les patients au fauteuil. Pendant ce temps, des messages restent sans réponse et des créneaux se perdent.</p>
-      <p class="intro">Nous construisons une solution IA dédiée aux cabinets, avec un petit groupe de praticiens. Vous voulez en faire partie ?</p>
+      <p class="intro"><strong>On ne remplace pas votre logiciel de cabinet : on répond à vos patients.</strong> L'assistant IA travaille à côté de votre agenda actuel, et votre assistante garde la main sur tout ce qui est délicat.</p>
+      <p class="intro">Nous le construisons avec un petit groupe de praticiens. Vous voulez en faire partie ?</p>
       <div class="actions">
         <a href="#contact" class="btn btn--navy" data-sector="Cabinet dentaire / médical">Rejoindre les premiers cabinets →</a>
       </div>
@@ -358,10 +397,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <div class="reveal">
       <div class="pains-head"><span>Ce qui vous coûte</span><span>Ce que l'IA règle</span></div>
       <ul class="pains">
-        <li><div class="p">Messages WhatsApp sans réponse pendant les soins</div><div class="s">Réponse immédiate aux patients, 24 h sur 24</div></li>
-        <li><div class="p">Rendez-vous oubliés et créneaux vides</div><div class="s">Rappels automatiques et liste d'attente</div></li>
-        <li><div class="p">Relances, suivis et avis patients faits à la main</div><div class="s">Suivi post-soin et demande d'avis automatisés</div></li>
-        <li><div class="p">Aucune vision claire de l'activité du cabinet</div><div class="s">Tableau de bord : rendez-vous, absences, nouveaux patients</div></li>
+        <li><div class="p">Messages WhatsApp sans réponse pendant les soins</div><div class="s">Réponse immédiate, 24 h sur 24, même le soir et le week-end</div></li>
+        <li><div class="p">Patients qui envoient des vocaux en darija</div><div class="s">L'IA comprend les notes vocales et répond dans la langue du patient</div></li>
+        <li><div class="p">Questions répétées : horaires, adresse, tarifs, documents</div><div class="s">Réponses justes, validées par le cabinet, sans déranger l'équipe</div></li>
+        <li><div class="p">Créneaux perdus et rendez-vous oubliés</div><div class="s">Créneaux proposés directement, rappels et liste d'attente</div></li>
+        <li><div class="p">Peu d'avis Google malgré des patients satisfaits</div><div class="s">Demande d'avis envoyée au bon moment, après le soin</div></li>
       </ul>
     </div>
   </div>
@@ -376,9 +416,50 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     </div>
     <div class="pillars">
       <div class="pillar reveal"><h3>À distance, partout</h3><p>Pas d'installation, pas de déplacement. Basés à Agadir, on travaille avec tout le Maroc.</p></div>
-      <div class="pillar reveal"><h3>Jugé sur le résultat</h3><p>Chaque étape a un objectif chiffré : heures gagnées, rendez-vous récupérés, erreurs évitées.</p></div>
+      <div class="pillar reveal"><h3>Jugé sur le résultat</h3><p>Chaque étape a un objectif chiffré. Et aucun chiffre inventé : un résultat n'est publié que s'il a été mesuré chez le client.</p></div>
       <div class="pillar reveal"><h3>Vous restez propriétaire</h3><p>Code, données, accès, documentation : tout vous appartient. Aucune dépendance cachée.</p></div>
       <div class="pillar reveal"><h3>Suivi dans la durée</h3><p>Hébergement, mises à jour et nouvelles fonctions. La solution évolue avec votre activité.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head reveal">
+      <span class="label">Questions fréquentes</span>
+      <h2>Ce qu'on nous <span class="accent">demande.</span></h2>
+      <p>Une autre question ? Écrivez-nous sur WhatsApp, on répond dans la journée.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>L'IA va-t-elle remplacer mon équipe ?</summary>
+        <p>Non. Elle prend les tâches répétitives : répondre aux mêmes questions, proposer des créneaux, relancer. Votre équipe garde la main et récupère les demandes délicates. L'objectif est de lui rendre du temps, pas de la remplacer.</p>
+      </details>
+      <details>
+        <summary>Est-ce que ça marche avec mes outils actuels ?</summary>
+        <p>Oui, c'est le principe. On part de ce que vous utilisez déjà (WhatsApp, agenda, logiciel métier, Excel) et on s'y connecte. Vous n'avez pas à changer de logiciel.</p>
+      </details>
+      <details>
+        <summary>Mes clients écrivent en darija, parfois en vocal. L'IA comprend ?</summary>
+        <p>Oui. L'assistant comprend le français, l'arabe et la darija, y compris les notes vocales, et répond dans la langue du client.</p>
+      </details>
+      <details>
+        <summary>Que deviennent les données de mes clients ?</summary>
+        <p>Elles sont traitées dans le cadre de la loi marocaine 09-08. L'assistant n'a accès qu'aux informations nécessaires à sa tâche, et vous restez propriétaire de toutes vos données.</p>
+      </details>
+      <details>
+        <summary>Combien de temps pour démarrer ?</summary>
+        <p>Le diagnostic arrive sous 48 h après notre échange. Un premier assistant peut ensuite être en ligne en 2 à 4 semaines, selon ce qu'il doit faire.</p>
+      </details>
+      <details>
+        <summary>Combien ça coûte ?</summary>
+        <p>Un abonnement mensuel, adapté à la taille de votre activité, annoncé avant tout engagement. Le diagnostic, lui, est offert.</p>
+      </details>
+      <details>
+        <summary>Je dois être à Agadir pour travailler avec vous ?</summary>
+        <p>Non. Tout se fait à distance, en visio et sur WhatsApp, partout au Maroc. Rien à installer chez vous.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -389,7 +470,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     <div class="reveal">
       <span class="label">Contact</span>
       <h2>Parlons de votre <span class="accent">problème.</span></h2>
-      <p class="sub">20 minutes en visio ou sur WhatsApp, sans pitch. Vous repartez avec un premier avis gratuit sur ce que l'IA peut faire pour vous.</p>
+      <p class="sub">20 minutes en visio ou sur WhatsApp, sans pitch. Ensemble, on identifie les 3 tâches à confier à l'IA en premier.</p>
       <div class="channels">
         <a class="channel" href="https://wa.me/212669700460" target="_blank" rel="noopener"><span class="lbl">WHATSAPP</span><b>+212 669 700 460</b></a>
         <a class="channel" href="mailto:contact@arkanelab.com"><span class="lbl">EMAIL</span><b>contact@arkanelab.com</b></a>
