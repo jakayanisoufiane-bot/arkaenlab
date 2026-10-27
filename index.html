@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Arkane Lab", "url": "https://www.arkanelab.com", "logo": "https://www.arkanelab.com/assets/mark-512.png", "email": "contact@arkanelab.com", "telephone": "+212669700460", "slogan": "Built to solve.", "address": {"@type": "PostalAddress", "addressLocality": "Agadir", "addressCountry": "MA"}, "areaServed": "MA"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'IA va-t-elle remplacer mon équipe ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Elle prend les tâches répétitives : répondre aux mêmes questions, proposer des créneaux, relancer. Votre équipe garde la main et récupère les demandes délicates. L'objectif est de lui rendre du temps, pas de la remplacer."}}, {"@type": "Question", "name": "Est-ce que ça marche avec mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, c'est le principe. On part de ce que vous utilisez déjà (WhatsApp, agenda, logiciel métier, Excel) et on s'y connecte. Vous n'avez pas à changer de logiciel."}}, {"@type": "Question", "name": "Mes clients écrivent en darija, parfois en vocal. L'IA comprend ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L'assistant comprend le français, l'arabe et la darija, y compris les notes vocales, et répond dans la langue du client."}}, {"@type": "Question", "name": "Que deviennent les données de mes clients ?", "acceptedAnswer": {"@type": "Answer", "text": "Elles sont traitées dans le cadre de la loi marocaine 09-08. L'assistant n'a accès qu'aux informations nécessaires à sa tâche, et vous restez propriétaire de toutes vos données."}}, {"@type": "Question", "name": "Combien de temps pour démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic arrive sous 48 h après notre échange. Un premier assistant peut ensuite être en ligne en 2 à 4 semaines, selon ce qu'il doit faire."}}, {"@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": {"@type": "Answer", "text": "Un abonnement mensuel, adapté à la taille de votre activité, annoncé avant tout engagement. Le diagnostic, lui, est offert."}}, {"@type": "Question", "name": "Je dois être à Agadir pour travailler avec vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Tout se fait à distance, en visio et sur WhatsApp, partout au Maroc. Rien à installer chez vous."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "L'IA va-t-elle remplacer mon équipe ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Elle prend les tâches répétitives : répondre aux mêmes questions, proposer des créneaux, relancer. Votre équipe garde la main et récupère les demandes délicates. L'objectif est de lui rendre du temps, pas de la remplacer."}}, {"@type": "Question", "name": "Est-ce que ça marche avec mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, c'est le principe. On part de ce que vous utilisez déjà (WhatsApp, agenda, logiciel métier, Excel) et on s'y connecte. Vous n'avez pas à changer de logiciel."}}, {"@type": "Question", "name": "Mes clients écrivent en darija, parfois en vocal. L'IA comprend ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. L'assistant comprend le français, l'arabe et la darija, y compris les notes vocales, et répond dans la langue du client."}}, {"@type": "Question", "name": "Que deviennent les données de mes clients ?", "acceptedAnswer": {"@type": "Answer", "text": "Elles sont traitées dans le cadre de la loi marocaine 09-08. L'assistant n'a accès qu'aux informations nécessaires à sa tâche, et vous restez propriétaire de toutes vos données."}}, {"@type": "Question", "name": "Et si un patient décrit une urgence ?", "acceptedAnswer": {"@type": "Answer", "text": "L'assistant ne donne jamais d'avis médical. Dès qu'un message évoque une douleur forte, un saignement ou une urgence, il oriente le patient vers le cabinet ou le numéro d'urgence que vous avez choisi, et prévient votre équipe."}}, {"@type": "Question", "name": "Combien de temps pour démarrer ?", "acceptedAnswer": {"@type": "Answer", "text": "Le diagnostic arrive sous 48 h après notre échange. Un premier assistant peut ensuite être en ligne en 2 à 4 semaines, selon ce qu'il doit faire."}}, {"@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": {"@type": "Answer", "text": "Un abonnement mensuel, adapté à la taille de votre activité, annoncé avant tout engagement. Le diagnostic, lui, est offert."}}, {"@type": "Question", "name": "Je dois être à Agadir pour travailler avec vous ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Tout se fait à distance, en visio et sur WhatsApp, partout au Maroc. Rien à installer chez vous."}}]}</script>
 <style>
 /* ============================================================
    ARKANE LAB — Identité 2026
@@ -199,6 +199,36 @@ header.scrolled{background:rgba(2,16,49,.88);backdrop-filter:blur(12px);border-b
 .pains-head{display:grid;grid-template-columns:1fr 1fr;gap:20px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#4A5675;padding-bottom:12px}
 .pains-head span:last-child{padding-left:23px}
 
+/* démo WhatsApp + limites */
+.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:clamp(56px,8vw,96px);padding-top:clamp(48px,7vw,80px);border-top:1px solid rgba(2,16,49,.18)}
+.chat{background:var(--navy);border-radius:0;padding:0;max-width:420px;box-shadow:0 30px 60px -30px rgba(2,16,49,.55)}
+.chat-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.chat-top .av{width:34px;height:34px;background:var(--sand);color:var(--navy);display:grid;place-items:center;font-weight:700;font-size:13px}
+.chat-top b{display:block;color:var(--white);font-size:14.5px;font-weight:600;line-height:1.2}
+.chat-top small{color:var(--mist);font-size:12px}
+.chat-body{padding:18px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:84%;padding:10px 13px;font-size:14.5px;line-height:1.45}
+.msg.in{align-self:flex-start;background:var(--navy-3);color:var(--white)}
+.msg.out{align-self:flex-end;background:var(--sand);color:var(--navy)}
+.msg .t{display:block;font-size:11px;opacity:.6;margin-top:4px;text-align:right}
+.voice{display:flex;align-items:center;gap:10px}
+.voice .play{width:0;height:0;border-left:9px solid var(--sand);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.voice .wave{flex:1;height:18px;min-width:120px;background:repeating-linear-gradient(90deg,var(--mist) 0 2px,transparent 2px 5px);mask-image:linear-gradient(180deg,transparent 20%,#000 20%,#000 80%,transparent 80%);opacity:.8}
+.msg .tr{display:block;margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:13px;color:var(--mist);font-style:italic}
+.sys{align-self:center;font-size:12px;letter-spacing:.06em;color:var(--sand);border:1px solid var(--line-strong);padding:6px 12px}
+.chat-note{font-size:12.5px;color:#4A5675;margin-top:14px;max-width:420px}
+.limits h3{font-size:clamp(26px,3vw,34px);margin:20px 0 14px}
+.limits > p{color:#2A3657;max-width:46ch}
+.limits ul{list-style:none;margin-top:26px;border-top:1px solid rgba(2,16,49,.18)}
+.limits li{display:grid;grid-template-columns:28px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid rgba(2,16,49,.18);font-size:16px;line-height:1.45}
+.limits li::before{content:"×";width:28px;height:28px;display:grid;place-items:center;background:var(--navy);color:var(--sand);font-weight:700}
+.limits li b{font-weight:600}
+.limits li span{display:block;color:#2A3657;font-size:14.5px}
+/* bouton WhatsApp flottant */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--sand);color:var(--navy);font-weight:600;font-size:14.5px;padding:13px 18px;box-shadow:0 14px 34px -12px rgba(0,0,0,.55);transition:.25s}
+.wa-float:hover{background:var(--white);transform:translateY(-2px)}
+.wa-float svg{width:18px;height:18px;flex:none}
+
 /* garanties */
 .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .pillar{border-top:2px solid var(--sand);padding-top:24px}
@@ -240,6 +270,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 
 /* ---------- responsive ---------- */
 @media(max-width:960px){
+  .demo-grid{grid-template-columns:1fr;gap:44px}
   .hero-grid,.manifesto .row,.contact-grid,.clinic-grid{grid-template-columns:1fr;gap:44px}
   .cards{grid-template-columns:1fr 1fr}
   .pillars{grid-template-columns:1fr 1fr}
@@ -255,6 +286,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
   .hero{padding:140px 0 80px}
 }
 @media(max-width:600px){
+  .wa-float{right:16px;bottom:16px;padding:12px 16px}
   .cards,.pillars{grid-template-columns:1fr}
   .pains li,.pains-head{grid-template-columns:1fr;gap:8px}
   .pains .s{padding-left:14px}
@@ -405,6 +437,33 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       </ul>
     </div>
   </div>
+
+  <div class="wrap demo-grid">
+    <div class="reveal">
+      <div class="chat" role="img" aria-label="Exemple de conversation WhatsApp entre un patient et l'assistant IA d'un cabinet dentaire, en darija">
+        <div class="chat-top"><div class="av">CD</div><div><b>Cabinet dentaire</b><small>Assistant IA · répond en quelques secondes</small></div></div>
+        <div class="chat-body">
+          <div class="msg in"><div class="voice"><span class="play"></span><span class="wave"></span><span>0:09</span></div><span class="tr">« Salam, bghit rendez-vous dyal détartrage, wach kayn chi blassa nhar lkhmis ? »</span><span class="t">21:47</span></div>
+          <div class="msg out">Salam ! Ah kayn, lkhmis f 10h30 wla f 16h00. Ina we9t ykhdem m3ak ?<span class="t">21:47</span></div>
+          <div class="msg in">16h afak<span class="t">21:48</span></div>
+          <div class="msg out">Safi, tsjjel lik rendez-vous lkhmis m3a 16h00 ✓ Ghadi nsiftou lik tadkir nhar qbel.<span class="t">21:48</span></div>
+          <div class="sys">Agenda du cabinet mis à jour</div>
+        </div>
+      </div>
+      <p class="chat-note">Exemple de conversation. Un vocal en darija reçu à 21 h 47, cabinet fermé : le rendez-vous est pris en une minute.</p>
+    </div>
+    <div class="limits reveal">
+      <span class="label">Des limites claires</span>
+      <h3>Ce que l'assistant ne fait jamais.</h3>
+      <p>Il s'occupe de l'accueil, pas du soin. Ces règles sont fixées avec chaque cabinet avant la mise en ligne.</p>
+      <ul>
+        <li><div><b>Pas de diagnostic</b><span>Il ne commente ni symptômes, ni photos, ni radios.</span></div></li>
+        <li><div><b>Pas de conseil médical</b><span>Toute question médicale est transmise à votre équipe.</span></div></li>
+        <li><div><b>Pas d'urgence gérée seul</b><span>Douleur forte ou saignement : le patient est orienté vers le cabinet ou le numéro d'urgence que vous choisissez.</span></div></li>
+        <li><div><b>Pas d'accès au dossier patient</b><span>Il ne voit que l'agenda et les informations d'accueil nécessaires.</span></div></li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- ======================= GARANTIES ======================= -->
@@ -447,6 +506,10 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
       <details>
         <summary>Que deviennent les données de mes clients ?</summary>
         <p>Elles sont traitées dans le cadre de la loi marocaine 09-08. L'assistant n'a accès qu'aux informations nécessaires à sa tâche, et vous restez propriétaire de toutes vos données.</p>
+      </details>
+      <details>
+        <summary>Et si un patient décrit une urgence ?</summary>
+        <p>L'assistant ne donne jamais d'avis médical. Dès qu'un message évoque une douleur forte, un saignement ou une urgence, il oriente le patient vers le cabinet ou le numéro d'urgence que vous avez choisi, et prévient votre équipe.</p>
       </details>
       <details>
         <summary>Combien de temps pour démarrer ?</summary>
@@ -513,6 +576,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
     </div>
   </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/212669700460?text=Bonjour%20Arkane%20Lab%2C%20j%27aimerais%20en%20savoir%20plus." target="_blank" rel="noopener" aria-label="Écrire à Arkane Lab sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>WhatsApp</span></a>
 
 <script>
 // header
